@@ -49,7 +49,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            Less dependency, <span className={styles.accent}>more ownership.</span>
+            Less dependency, more <span className={styles.accent}>ownership.</span>
           </motion.p>
 
           {/* Description */}
