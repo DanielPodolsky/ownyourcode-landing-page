@@ -4,14 +4,7 @@ Marketing site for [OwnYourCode](https://github.com/DanielPodolsky/ownyourcode) 
 
 ## Live Site
 
-[ownyourcode.dev](https://ownyourcode.dev) *(coming soon)*
-
-## Local Development
-
-```bash
-npm install
-npm run dev
-```
+[ownyourcode.dev](https://ownyourcode.dev)
 
 ## Tech Stack
 
