@@ -71,9 +71,11 @@ export default function Flywheel() {
                 transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               >
                 <div className={styles.flowStepNumber}>{index + 1}</div>
-                <code className={styles.flowStepCommand}>{step.command}</code>
-                <span className={styles.flowStepLabel}>{step.label}</span>
-                <span className={styles.flowStepDescription}>{step.description}</span>
+                <div className={styles.flowStepContent}>
+                  <code className={styles.flowStepCommand}>{step.command}</code>
+                  <span className={styles.flowStepLabel}>{step.label}</span>
+                  <span className={styles.flowStepDescription}>{step.description}</span>
+                </div>
                 {index < steps.length - 1 && (
                   <div className={styles.flowArrow}>→</div>
                 )}

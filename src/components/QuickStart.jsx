@@ -16,7 +16,7 @@ export default function QuickStart() {
     },
     windows: {
       step1: 'irm https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/base-install.ps1 | iex',
-      step2: 'cd your-project; ~/ownyourcode/scripts/project-install.ps1',
+      step2: 'cd your-project; irm https://raw.githubusercontent.com/DanielPodolsky/ownyourcode/main/scripts/project-install.ps1 | iex',
       step3: '/own:init'
     }
   }
