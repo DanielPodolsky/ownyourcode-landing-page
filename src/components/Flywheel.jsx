@@ -7,27 +7,32 @@ const steps = [
   {
     command: '/own:feature',
     label: 'Plan',
-    description: 'Plan a new feature (creates spec, design, tasks)'
+    description: 'Grab the next mission from your roadmap',
+    optional: false
   },
   {
     command: '/own:advise',
     label: 'Advise',
-    description: 'Get relevant learnings before starting a task'
+    description: 'Pull relevant learnings before starting',
+    optional: true
   },
   {
     command: '/own:guide',
     label: 'Implement',
-    description: 'Get implementation help as you code'
+    description: 'Get hints and patterns as you code',
+    optional: true
   },
   {
     command: '/own:done',
     label: 'Complete',
-    description: 'Pass 6 Gates, code review, extract STAR story'
+    description: 'Pass 6 Gates + S.T.A.R extraction (Interview Prep default)',
+    optional: false
   },
   {
     command: '/own:retro',
     label: 'Reflect',
-    description: 'Capture what you learned'
+    description: 'Capture what you learned for next time',
+    optional: true
   }
 ]
 
@@ -54,8 +59,8 @@ export default function Flywheel() {
           <span className={styles.badge}>The Cycle</span>
           <h2 className={styles.title}>The Learning Flywheel</h2>
           <p className={styles.subtitle}>
-            Your learnings compound over time. Unlike normal AI chats that forget everything,
-            OwnYourCode remembers.
+            Your learnings compound over time. Every session builds on the last —
+            patterns, failures, and wins feed into the next mission.
           </p>
         </motion.div>
 
@@ -73,7 +78,10 @@ export default function Flywheel() {
                 <div className={styles.flowStepNumber}>{index + 1}</div>
                 <div className={styles.flowStepContent}>
                   <code className={styles.flowStepCommand}>{step.command}</code>
-                  <span className={styles.flowStepLabel}>{step.label}</span>
+                  <span className={styles.flowStepLabel}>
+                    {step.label}
+                    {step.optional && <span className={styles.optionalBadge}>optional</span>}
+                  </span>
                   <span className={styles.flowStepDescription}>{step.description}</span>
                 </div>
                 {index < steps.length - 1 && (

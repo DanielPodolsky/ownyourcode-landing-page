@@ -5,7 +5,7 @@
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -31,10 +31,10 @@
 }
 
 .title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
@@ -53,7 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
-  gap: 0.5rem;
+  gap: 0.75rem;
   flex-wrap: wrap;
 }
 
@@ -62,13 +62,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  padding: 1.25rem 1rem;
+  gap: 0.75rem;
+  padding: 1.75rem 1.5rem;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  width: 160px;
-  min-height: 180px;
+  border-radius: 16px;
+  width: 200px;
+  min-height: 230px;
   text-align: center;
   transition: all 0.3s ease;
 }
@@ -76,12 +76,12 @@
 .flowStep:hover {
   border-color: var(--border-accent);
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 12px 40px rgba(34, 197, 94, 0.1);
 }
 
 .flowStepNumber {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +89,7 @@
   color: var(--accent);
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 1.1rem;
   border-radius: 50%;
   border: 1px solid var(--border-accent);
   flex-shrink: 0;
@@ -105,33 +105,50 @@
 
 .flowStepCommand {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--accent);
   background: var(--accent-subtle);
-  padding: 0.25rem 0.5rem;
+  padding: 0.3rem 0.625rem;
   border-radius: 4px;
   white-space: nowrap;
 }
 
 .flowStepLabel {
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--text-primary);
 }
 
+.optionalBadge {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  background: var(--bg-elevated);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .flowStepDescription {
-  font-size: 0.7rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
-  line-height: 1.4;
+  line-height: 1.5;
   margin-top: auto;
 }
 
 .flowArrow {
   position: absolute;
-  right: -20px;
+  right: -22px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--accent);
   font-weight: 300;
   z-index: 2;
@@ -143,7 +160,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   padding: 1rem 1.5rem;
   background: var(--accent-subtle);
   border: 1px solid var(--border-accent);
@@ -227,11 +244,13 @@
 /* Responsive */
 @media (max-width: 900px) {
   .flow {
-    gap: 1rem;
+    gap: 1.25rem;
   }
 
   .flowStep {
-    min-width: 120px;
+    min-width: 160px;
+    width: auto;
+    flex: 1 1 160px;
   }
 
   .flowArrow {
@@ -259,11 +278,11 @@
 
   .flowStep {
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
     flex-direction: row;
     text-align: left;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.25rem;
     min-height: auto;
   }
 

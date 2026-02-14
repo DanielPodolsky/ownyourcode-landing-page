@@ -19,14 +19,6 @@ export default function VideoSection() {
     }
   }
 
-  // Video narrative structure based on the Remotion acts
-  const videoHighlights = [
-    { time: '0:00', label: 'The Pain', description: 'AI dependency problem' },
-    { time: '0:52', label: 'The Turn', description: 'OwnYourCode introduction' },
-    { time: '0:59', label: 'The Solution', description: '6 Gates & Flywheel' },
-    { time: '1:33', label: 'The CTA', description: 'Get started' },
-  ]
-
   return (
     <section className={styles.section} ref={ref}>
       <div className={styles.container}>
@@ -37,10 +29,10 @@ export default function VideoSection() {
           transition={{ duration: 0.6 }}
         >
           <span className={styles.badge}>Watch</span>
-          <h2 className={styles.title}>The Problem with AI Coding Tools</h2>
+          <h2 className={styles.title}>See OwnYourCode in Action</h2>
           <p className={styles.subtitle}>
-            MIT research shows AI assistance weakens brain connectivity.
-            OwnYourCode flips the script — AI mentors, you build.
+            Watch how AI mentorship transforms your development workflow.
+            Same quality standards — adapted to how you learn.
           </p>
         </motion.div>
 

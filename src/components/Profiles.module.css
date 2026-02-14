@@ -1,0 +1,248 @@
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  background: var(--accent-subtle);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 100px;
+  border: 1px solid var(--border-accent);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Profile pills */
+.pills {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.pill {
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-out-expo);
+  white-space: nowrap;
+}
+
+.pill:hover {
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+}
+
+.pillActive {
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border-color: var(--border-accent);
+}
+
+/* Detail card */
+.detailCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.detailTop {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.detailName {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.detailTagline {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Feature rows */
+.featureRows {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.featureRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.featureLabel {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.featureValue {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  padding: 0.25rem 0.75rem;
+  background: var(--bg-elevated);
+  border-radius: 100px;
+}
+
+.featureActive {
+  color: var(--accent);
+  background: var(--accent-subtle);
+  font-weight: 600;
+}
+
+.featureHighlight {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+/* Mini terminal */
+.miniTerminal {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.miniTerminalHeader {
+  display: flex;
+  gap: 0.375rem;
+  padding: 0.625rem 0.75rem;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot[data-color="red"] { background: var(--terminal-red); }
+.dot[data-color="yellow"] { background: var(--terminal-yellow); }
+.dot[data-color="green"] { background: var(--terminal-green); }
+
+.miniTerminalBody {
+  padding: 0.875rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.miniTerminalLine {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.prompt {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.miniCommand {
+  color: var(--text-primary);
+}
+
+.miniTerminalOutput {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  padding-left: 1.25rem;
+}
+
+/* Bottom note */
+.bottomNote {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.inlineCode {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-style: normal;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .pills {
+    gap: 0.375rem;
+  }
+
+  .pill {
+    padding: 0.4rem 0.875rem;
+    font-size: 0.75rem;
+  }
+
+  .detailCard {
+    padding: 1.5rem;
+  }
+
+  .featureRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.375rem;
+  }
+}

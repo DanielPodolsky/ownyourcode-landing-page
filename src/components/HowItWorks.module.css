@@ -31,10 +31,10 @@
 }
 
 .title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
@@ -204,6 +204,76 @@
   z-index: -1;
 }
 
+/* Protocols */
+.protocols {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.protocolsTitle {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.protocolsSubtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.protocolsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.protocol {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.5rem 1.25rem;
+  text-align: left;
+  transition: all 0.3s var(--ease-out-expo);
+}
+
+.protocol:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+}
+
+.protocolLetter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.protocolName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.protocolDescription {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 @media (max-width: 900px) {
   .phase {
     grid-template-columns: 1fr;
@@ -216,6 +286,10 @@
 
   .connector {
     display: none;
+  }
+
+  .protocolsGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -234,5 +308,9 @@
 
   .phaseTitle {
     font-size: 1.5rem;
+  }
+
+  .protocolsGrid {
+    grid-template-columns: 1fr;
   }
 }

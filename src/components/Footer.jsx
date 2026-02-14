@@ -31,7 +31,7 @@ export default function Footer() {
               <span className={styles.own}>Own</span>
               <span className={styles.yourCode}>YourCode</span>
             </h3>
-            <p className={styles.tagline}>Less dependency, more ownership.</p>
+            <p className={styles.tagline}>AI mentors, you build. You <span className={styles.accent}>own</span> the result.</p>
             <p className={styles.creator}>
               Created by <a href="https://github.com/DanielPodolsky" target="_blank" rel="noopener noreferrer" className={styles.creatorLink}>Daniel Podolsky</a>
             </p>
@@ -60,7 +60,7 @@ export default function Footer() {
             Free & Open Source. Built for developers who believe in growth over shortcuts.
           </p>
           <div className={styles.version}>
-            <span className={styles.versionBadge}>v2.1</span>
+            <span className={styles.versionBadge}>v2.3.0</span>
           </div>
         </div>
       </div>

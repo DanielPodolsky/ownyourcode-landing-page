@@ -159,7 +159,7 @@ export default function QuickStart() {
             <div className={styles.whatNextText}>
               <p className={styles.whatNextLabel}>Ready to build?</p>
               <div className={styles.whatNextCommand}>
-                <code><span className={styles.accent}>/own:feature</span> user-authentication</code>
+                <code><span className={styles.accent}>/own:feature</span></code>
               </div>
             </div>
           </div>

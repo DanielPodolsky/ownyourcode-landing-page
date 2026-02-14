@@ -39,7 +39,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            AI-Mentored Development for Juniors
+            AI-Mentored Development
           </motion.p>
 
           {/* Slogan */}
@@ -49,7 +49,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            Less dependency, more <span className={styles.accent}>ownership.</span>
+            AI mentors, you build. You <span className={styles.accent}>own</span> the result.
           </motion.p>
 
           {/* Description */}
@@ -59,9 +59,8 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            Stop accepting AI code you don't fully understand. OwnYourCode guides you
-            through implementation with strategic hints, not solutions.
-            You write every line. You own every decision.
+            AI coding tools optimize for shipping, but speed without understanding is
+            a trap. OwnYourCode flips this — AI becomes your mentor, not your coder.
           </motion.p>
 
           {/* CTA */}
@@ -101,12 +100,12 @@ export default function Hero() {
             </div>
             <div className={styles.line}>
               <span className={styles.output}>
-                <span className={styles.accent}>✓</span> OwnYourCode initialized
+                <span className={styles.accent}>✓</span> Select your profile
               </span>
             </div>
             <div className={styles.line}>
               <span className={styles.output}>
-                <span className={styles.accent}>→</span> Run /own:feature to start planning
+                <span className={styles.accent}>→</span> junior | career-switcher | interview-prep | experienced | custom
               </span>
             </div>
             <div className={styles.cursor} />
