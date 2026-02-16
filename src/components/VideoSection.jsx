@@ -59,7 +59,7 @@ export default function VideoSection() {
               <video
                 ref={videoRef}
                 className={styles.video}
-                src="/demo.mp4"
+                src="/ownyourcode.mp4"
                 playsInline
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
