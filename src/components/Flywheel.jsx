@@ -111,7 +111,7 @@ export default function Flywheel() {
         >
           <h3 className={styles.persistsTitle}>What persists across sessions:</h3>
           <div className={styles.persistsGrid}>
-            {persists.map((item, index) => (
+            {persists.map((item) => (
               <div key={item.label} className={styles.persistItem}>
                 <span className={styles.persistLabel}>{item.label}</span>
                 <span className={styles.persistDescription}>{item.description}</span>

@@ -1,9 +1,12 @@
-import { useMemo } from 'react'
+import { useState } from 'react'
 import styles from './StarField.module.css'
 
 export default function StarField({ count = 100 }) {
-  const stars = useMemo(() => {
-    return Array.from({ length: count }, (_, i) => ({
+  // Randomized once via a lazy initializer so the impure Math.random() runs a
+  // single time at mount — not on every render like useMemo would risk. The
+  // starfield is decorative, so it need not react to later `count` changes.
+  const [stars] = useState(() =>
+    Array.from({ length: count }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -11,7 +14,7 @@ export default function StarField({ count = 100 }) {
       opacity: Math.random() * 0.5 + 0.2,
       duration: Math.random() * 3 + 2
     }))
-  }, [count])
+  )
 
   return (
     <div className={styles.starField}>

@@ -2,6 +2,29 @@ import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import styles from './QuickStart.module.css'
 
+// Declared at module scope (not inside render) so React keeps a stable component
+// type across renders. State it needs is passed in: copiedStep + an onCopy handler.
+function CopyButton({ step, text, copiedStep, onCopy }) {
+  return (
+    <button
+      className={styles.copyBtn}
+      onClick={() => onCopy(step, text)}
+      aria-label="Copy command"
+    >
+      {copiedStep === step ? (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
+          <rect x="9" y="9" width="13" height="13" rx="2" />
+          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+        </svg>
+      )}
+    </button>
+  )
+}
+
 export default function QuickStart() {
   const [activeTab, setActiveTab] = useState('unix')
   const [copiedStep, setCopiedStep] = useState(null)
@@ -26,25 +49,6 @@ export default function QuickStart() {
     setCopiedStep(step)
     setTimeout(() => setCopiedStep(null), 2000)
   }
-
-  const CopyButton = ({ step, text }) => (
-    <button
-      className={styles.copyBtn}
-      onClick={() => handleCopy(step, text)}
-      aria-label="Copy command"
-    >
-      {copiedStep === step ? (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
-          <polyline points="20 6 9 17 4 12" />
-        </svg>
-      ) : (
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
-          <rect x="9" y="9" width="13" height="13" rx="2" />
-          <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
-        </svg>
-      )}
-    </button>
-  )
 
   return (
     <section id="quickstart" className={styles.section} ref={ref}>
@@ -107,7 +111,7 @@ export default function QuickStart() {
               <div className={styles.commandLine}>
                 <span className={styles.prompt}>$</span>
                 <code className={styles.command}>{steps[activeTab].step1}</code>
-                <CopyButton step="step1" text={steps[activeTab].step1} />
+                <CopyButton step="step1" text={steps[activeTab].step1} copiedStep={copiedStep} onCopy={handleCopy} />
               </div>
             </div>
 
@@ -120,7 +124,7 @@ export default function QuickStart() {
               <div className={styles.commandLine}>
                 <span className={styles.prompt}>$</span>
                 <code className={styles.command}>{steps[activeTab].step2}</code>
-                <CopyButton step="step2" text={steps[activeTab].step2} />
+                <CopyButton step="step2" text={steps[activeTab].step2} copiedStep={copiedStep} onCopy={handleCopy} />
               </div>
             </div>
 
@@ -133,7 +137,7 @@ export default function QuickStart() {
               <div className={styles.commandLine}>
                 <span className={styles.prompt}>&gt;</span>
                 <code className={styles.command}><span className={styles.accent}>{steps[activeTab].step3}</span></code>
-                <CopyButton step="step3" text={steps[activeTab].step3} />
+                <CopyButton step="step3" text={steps[activeTab].step3} copiedStep={copiedStep} onCopy={handleCopy} />
               </div>
             </div>
 
