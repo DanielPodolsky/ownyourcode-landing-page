@@ -43,13 +43,18 @@ const coreWorkflow = [
 const utilities = [
   {
     name: '/own:status',
-    description: 'Check progress + learning stats',
+    description: 'Check progress, tasks, and career stats',
     icon: '◉'
   },
   {
     name: '/own:profile',
     description: 'Switch or customize your mentorship profile',
     icon: '◇'
+  },
+  {
+    name: '/own:theme',
+    description: 'Restyle your project dashboard from a design brief',
+    icon: '◐'
   },
   {
     name: '/own:test',
@@ -79,7 +84,7 @@ export default function Commands() {
           <span className={styles.badge}>Commands</span>
           <h2 className={styles.title}>Your Toolkit</h2>
           <p className={styles.subtitle}>
-            11 commands. Core workflow + utilities. 6 gates. Infinite learning potential.
+            12 commands. Core workflow + utilities. 6 gates. Infinite learning potential.
           </p>
         </motion.div>
 

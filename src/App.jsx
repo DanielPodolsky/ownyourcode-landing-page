@@ -4,6 +4,7 @@ import VideoSection from './components/VideoSection'
 import Problem from './components/Problem'
 import Profiles from './components/Profiles'
 import HowItWorks from './components/HowItWorks'
+import Dashboard from './components/Dashboard'
 import SixGates from './components/SixGates'
 import CustomProfiles from './components/CustomProfiles'
 import Flywheel from './components/Flywheel'
@@ -24,6 +25,7 @@ function App() {
         <Problem />
         <Profiles />
         <HowItWorks />
+        <Dashboard />
         <SixGates />
         <CustomProfiles />
         <Flywheel />

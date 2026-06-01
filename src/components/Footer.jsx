@@ -60,7 +60,7 @@ export default function Footer() {
             Free & Open Source. Built for developers who believe in growth over shortcuts.
           </p>
           <div className={styles.version}>
-            <span className={styles.versionBadge}>v2.3.0</span>
+            <span className={styles.versionBadge}>v2.5.0</span>
           </div>
         </div>
       </div>
